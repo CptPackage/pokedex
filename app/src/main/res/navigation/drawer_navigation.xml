@@ -12,4 +12,26 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home"/>
 
+    <fragment
+        android:id="@+id/nav_move"
+        android:name="com.xeroxparc.pokedex.ui.move.MoveFragment"
+        android:label="@string/menu_move"
+        tools:layout="@layout/fragment_move">
+        <action
+            android:id="@+id/action_nav_move_to_nav_move_detail"
+            app:destination="@id/nav_move_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_move_detail"
+        android:name="com.xeroxparc.pokedex.ui.move.MoveDetailFragment"
+        android:label="@string/menu_move_detail"
+        tools:layout="@layout/fragment_move_detail">
+        <argument
+            android:name="move_title"
+            app:argType="string"
+            android:defaultValue="move name"/>
+
+    </fragment>
+
 </navigation>
